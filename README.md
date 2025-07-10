@@ -14,7 +14,7 @@ Responsive design for different screen sizes
 Tech Stack
 
 Frontend:
-HTML5, CSS3, JavaScript, React
+HTML5, CSS3, JavaScript
 
 Backend:
 PHP, MySQL
