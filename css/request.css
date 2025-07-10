@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav_logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.nav_items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_item .nav_link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff4f18;
+    transition: color 0.3s ease;
+}
+
+.nav_item .nav_link:hover {
+    color: #161616;
+}
+
+.button {
+    background-color: #ff4f18;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e63b0d;
+}
+
+/* Main Content Styles */
+h1 {
+    text-align: center;
+    color: #ff4f18;
+    margin-top: 40px;
+    font-size: 32px;
+}
+
+/* Request Services Section */
+.RequestServices {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px; 
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.RequestServices h2 {
+    color: #ff4f18;
+    margin-bottom: 30px; 
+    text-align: center;
+}
+
+/* Form Layout */
+.RequestServices form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+/* Input Styles */
+.RequestServices form input,
+.RequestServices form select {
+    padding: 15px; 
+    font-size: 16px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+/* Make the dropdown larger */
+.RequestServices form select {
+    height: 50px; 
+    font-size: 16px;
+}
+
+/* Make text inputs bigger */
+.RequestServices form input[type="text"],
+.RequestServices form input[type="date"] {
+    height: 50px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+.RequestServices form button {
+    background-color: #ff4f18;
+    color: white;
+    padding: 15px 30px; 
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.RequestServices form button:hover {
+    background-color: #e63b0d;
+}

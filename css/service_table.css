@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff4f18;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.service-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.service-table thead {
+    background-color: #ff4f18;
+    color: #fff;
+}
+
+.service-table th,
+.service-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.service-table th {
+    font-size: 1.1rem;
+}
+
+.service-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.service-table tbody tr:hover {
+    background-color: #ffe6d5;
+}
+
+
+.service-table img {
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .service-table th,
+    .service-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .service-table img {
+        width: 40px;
+    }
+}
+.action-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+    margin: 0 5px;
+}
+
+.edit-button {
+    background-color: #28a745;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.action-button:hover {
+    opacity: 0.8;
+}
+.button {
+    display: block; 
+    margin: 20px auto; 
+    padding: 10px 20px;
+    background-color: #ff4f18;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #e04816;
+}

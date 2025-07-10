@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/admin_dashboard.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <!-- Header -->
+        <header class="header1">
+            <!-- Sidebar Icon -->
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+
+            <!-- Header Left -->
+            <div class="header-left">
+                <span class="material-symbols-outlined icon"> search </span>
+            </div>
+
+            <!-- Header Right -->
+            <div class="header-right">
+                <span class="material-symbols-outlined icon"> notifications</span>
+                <span class="material-symbols-outlined icon"> mail </span>
+                <span class="material-symbols-outlined icon">account_circle</span>
+                <!-- Sign Out Button -->
+            <button class="sign-out-button" onclick="location.href='homePage.html'">Sign Out</button>
+
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand"> 
+                    <span class="material-symbols-outlined">inventory </span> Your inventory
+                </div>
+                <span class="material-symbols-outlined" onclick="closeSidebar()">close </span>
+            </div>
+            <ul class="sidebar-list"> 
+                <li class="Sidebar-list-item"> 
+                    <span class="material-symbols-outlined">dashboard</span> Dashboard
+                </li>
+                <li class="Sidebar-list-item">
+                    <a href="service_table.html" style="text-decoration: none; color: inherit;">
+                        <span class="material-symbols-outlined">fact_check</span> Inventory
+                    </a>
+                </li>
+                <li class="Sidebar-list-item"> 
+                    <span class="material-symbols-outlined">add_shopping_cart</span> Purchase orders
+                </li>
+                <li class="Sidebar-list-item">
+                    <a href="OverviewServices.php" >
+                        <span class="material-symbols-outlined">shopping_cart</span> Sale Order
+                    </a>
+                </li>
+                
+                <li class="Sidebar-list-item" id="view-customers">
+                    <a href="customer.php" > 
+                        <span class="material-symbols-outlined">person</span> Customers
+                    </a>
+                </li>
+                
+                <li class="Sidebar-list-item"> 
+                    <span class="material-symbols-outlined">settings</span> Settings
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main -->
+        <main class="main-container">
+            <div class="main-title">
+                <p class="text-weight-bold">ADMIN DASHBOARD</p>
+            </div>
+            <div class="main">
+                <div class="div1">
+                    <div class="div1-inner">
+                        <p class="text-primary"> Products</p>
+                        <span class="material-symbols-outlined text-blue">inventory_2</span>
+                    </div>
+                    <span class="text-primary font-weight">100</span>
+                </div>
+
+                <div class="div1">
+                    <div class="div1-inner">
+                        <p class="text-primary"> Purchased order</p>
+                        <span class="material-symbols-outlined text-blue">add_shopping_cart</span>
+                    </div>
+                    <span class="text-primary font-weight">40</span>
+                </div>
+
+                <div class="div1">
+                    <div class="div1-inner">
+                        <p class="text-primary"> Sales order</p>
+                        <span class="material-symbols-outlined text-blue">shopping_cart</span>
+                    </div>
+                    <span class="text-primary font-weight">50</span>
+                </div>
+
+                <div class="div1">
+                    <div class="div1-inner">
+                        <p class="text-primary"> ALERTS</p>
+                        <span class="material-symbols-outlined text-blue">notification_important</span>
+                    </div>
+                    <span class="text-primary font-weight">100</span>
+                </div>
+            </div>
+
+
+            <!-- Main Content -->
+            <div class="dashboard-content">
+                <div class="overview">
+                    <div class="section overview-item">
+                        <h3>Business Information</h3>
+                        <label for="businessName">Business Name:</label>
+                        <input type="text" id="businessName" placeholder="Enter business name">
+                        
+                        <label for="businessDescription">Description:</label>
+                        <textarea id="businessDescription" placeholder="Enter business description" rows="4"></textarea>
+                        
+                        <button onclick="saveBusinessInfo()">Save Business Info</button>
+                    </div>
+
+                    <div class="add-service">
+                        <h3>Manage Services</h3>
+                        
+                        <!-- Add Service Section -->
+                        <div class="add-section">
+                            <a href="add_service.html" style="text-decoration: none; color: inherit;">
+                                <button>
+                                    <span class="material-symbols-outlined">add</span> Add Service
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-selection">
+                        <h3>Confirm Service</h3>
+                        <input type="text" id="customer" placeholder="Customer Name">
+                        <select id="serviceExec">
+                            <option value="">Select service</option>
+                        </select>
+                        <button onclick="confirmService()">Confirm Service</button>
+                    </div>
+
+                    <div class="unpaid-bills">
+                        <h3>Unpaid Bills</h3>
+                        <input type="text" id="customerBill" placeholder="Customer Name">
+                        <button onclick="sendReminder()">Send Reminder</button>
+                    </div>
+
+                    <div class="service-overview">
+                        <h3>Services Overview</h3>
+                        <a href="service_table.html" style="text-decoration: none;">
+                            <button>Show Overview</button>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin_dashbord.js"></script>
+</body>
+
+</html>

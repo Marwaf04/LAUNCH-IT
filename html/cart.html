@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cart</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="nav">
+                <a href="#" class="nav_logo"><img src="67.png" alt="Logo" width="100" height="100"></a>
+                <ul class="nav_items">
+                    <li class="nav_item">
+                        <a href="homePage.html" class="nav_link"><b>Home</b></a>
+                        <a href="product.html" class="nav_link"><b>Product</b></a>
+                        <a href="service.html" class="nav_link"><b>Service</b></a>
+                        <a href="aboutUs.html" class="nav_link"><b>About Us</b></a>
+                    </li>
+                </ul>
+                <button class="button" id="form-open" onclick="location.href='login.php';">
+                    Login
+                </button>
+                
+            </nav>
+            <div class="icon-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </header>
+        <div class="title">SERVICE LIST</div>
+
+        <!-- Hardcoded Services -->
+        <div class="listProduct">
+            <div class="item">
+                <img src="enhancing-productivity-with-laptop-use-on-sofas-3d-illustration-free-png-2.png" alt="General Service">
+                <h2>Service 1</h2>
+                <p class="description">This is a professional cleaning service for your home or office.</p>
+                <div class="price">$100</div>
+                <button class="addCart" data-name="Service 1" data-price="100">Add To Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="enhancing-productivity-with-laptop-use-on-sofas-3d-illustration-free-png-2.png" alt="General Service">
+                <h2>Service 2</h2>
+                <p class="description">A repair service for lighting fixtures and electrical issues.</p>
+                <div class="price">$150</div>
+                <button class="addCart" data-name="Service 2" data-price="150">Add To Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="enhancing-productivity-with-laptop-use-on-sofas-3d-illustration-free-png-2.png" alt="General Service">
+                <h2>Service 3</h2>
+                <p class="description">Premium sofa cleaning to keep your furniture looking like new.</p>
+                <div class="price">$200</div>
+                <button class="addCart" data-name="Service 3" data-price="200">Add To Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="enhancing-productivity-with-laptop-use-on-sofas-3d-illustration-free-png-2.png" alt="General Service">
+                <h2>Service 4</h2>
+                <p class="description">Assembly service for desks and office furniture.</p>
+                <div class="price">$50</div>
+                <button class="addCart" data-name="Service 4" data-price="50">Add To Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="enhancing-productivity-with-laptop-use-on-sofas-3d-illustration-free-png-2.png" alt="General Service">
+                <h2>Service 5</h2>
+                <p class="description">TV mounting service to securely install your television.</p>
+                <div class="price">$300</div>
+                <button class="addCart" data-name="Service 5" data-price="300">Add To Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="enhancing-productivity-with-laptop-use-on-sofas-3d-illustration-free-png-2.png" alt="General Service">
+                <h2>Service 6</h2>
+                <p class="description">Refrigerator repair service to keep your appliances running.</p>
+                <div class="price">$400</div>
+                <button class="addCart" data-name="Service 6" data-price="400">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Dynamically Loaded Services -->
+        <div id="dynamicServices" class="listProduct"></div>
+    </div>
+
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart" id="listCart"></div>
+        <div class="total">
+            <h3>Total: $<span id="total-price">0</span></h3>
+        </div>
+        <div class="btn">
+            <button class="close" onclick="closeCart()">CLOSE</button>
+            <button class="CheckOut">CHECK OUT</button>
+        </div>
+    </div>
+
+    <script>
+        fetch('fetch_services.php')
+            .then(response => response.json())
+            .then(data => {
+                const dynamicServices = document.getElementById('dynamicServices');
+                data.data.forEach(service => {
+                    const serviceHTML = `
+                        <div class="item">
+                            <img src="${service.image_path}" alt="${service.name}">
+                            <h2>${service.name}</h2>
+                            <p class="description">${service.description}</p>
+                            <div class="price">$${service.price}</div>
+                            <button class="addCart" data-name="${service.name}" data-price="${service.price}">Add To Cart</button>
+                        </div>`;
+                    dynamicServices.innerHTML += serviceHTML;
+                });
+            })
+            .catch(error => console.error("Error fetching services:", error));
+    </script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    color: #666666;
+    font-family: "Montserrat, sans-serif";
+}
+
+.icon {
+    vertical-align: middle;
+    line-height: 1px;
+}
+
+.icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.text-blue {
+    color: #246dec;
+}
+
+.text-green {
+    color: #397952;
+}
+
+.text-orange {
+    color: #f5b74f;
+}
+
+.text-red {
+    color: #cc3c43;
+}
+
+.text-weight-bold {
+    font-weight: 600;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 70px auto;
+    grid-template-areas:
+        "sidebar header header header"
+        "sidebar main main main";
+    height: 100vh;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: #ffffff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar */
+#sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #21232d;
+    color: #9799ab;
+    overflow-y: auto;
+    transition: all 0.5s;
+}
+
+.sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar-brand {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sidebar-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.Sidebar-list-item {
+    padding: 20px;
+}
+
+.Sidebar-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+/* Main */
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.main-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.div1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-left: 7px solid #246dec;
+    transition: transform 0.3s;
+}
+
+.div1:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.div1-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #246dec;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1a4f9c;
+}

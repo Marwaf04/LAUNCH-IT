@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cart</title>
+    <link rel="stylesheet" href="cSS/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav class="nav">
+                <a href="#" class="nav_logo"><img src="67.png" alt="Logo" width="100" height="100"></a>
+        
+                <!-- Create a Unordered List Class and Place All The Header's Menu Options -->
+                <ul class="nav_items">
+                <li class = "nav_item">
+                        <a href="homePage.html" class="nav_link"><b>Home</b></a>
+                        <a href="product.html" class="nav_link"><b>Product</b></a>
+                        <a href="cart.html" class="nav_link"><b>Service</b></a>
+                        <a href="aboutUs.html" class="nav_link"><b>About Us</b></a>
+                        
+                </li>
+                </ul>
+        
+                <button class="button" id="form-open">Login</button> <!-- Button for the Login -->
+            </nav>
+            
+            <div class="icon-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </header>
+        <div class="title">PRODUCT LIST</div>
+
+        <div class="listProduct">
+            <!-- Product 1 -->
+            <div class="item">
+                <img src="shoping bag.webp" alt="General Service">
+                <h2>Product 1</h2>
+                <p class="description">Add a desciption </p>
+                <div class="price">$100</div>
+                <button class="addCart" data-name="Product 1" data-price="100">Add To Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="item">
+                <img src="shoping bag.webp" alt="General Service">
+                <h2>Product 2</h2>
+                <p class="description">Add a desciption </p>
+                <div class="price">$150</div>
+                <button class="addCart" data-name="Product  2" data-price="150">Add To Cart</button>
+            </div>
+
+            <!-- Product  3 -->
+            <div class="item">
+                <img src="shoping bag.webp" alt="General Service">
+                <h2>Product 3</h2>
+                <p class="description">Add a desciption </p>
+                <div class="price">$200</div>
+                <button class="addCart" data-name="Product  3" data-price="200">Add To Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="item">
+                <img src="shoping bag.webp" alt="General Service">
+                <h2>Product 4</h2>
+                <p class="description">Add a desciption </p>
+                <div class="price">$50</div>
+                <button class="addCart" data-name="Product 4" data-price="50">Add To Cart</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="item">
+                <img src="shoping bag.webp" alt="General Service">
+                <h2>Product 5</h2>
+                <p class="description">Add a desciption </p>
+                <div class="price">$300</div>
+                <button class="addCart" data-name="Product 5" data-price="300">Add To Cart</button>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="item">
+                <img src="shoping bag.webp" alt="General Service">
+                <h2>Product 6</h2>
+                <p class="description">Add a desciption </p>
+                <div class="price">$400</div>
+                <button class="addCart" data-name="Product 6" data-price="400">Add To Cart</button>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart" id="listCart">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="total">
+            <h3>Total: $<span id="total-price">0</span></h3>
+        </div>
+
+        <div class="btn">
+            <button class="close" onclick="closeCart()">CLOSE</button>
+            <button class="CheckOut">CHECK OUT</button>
+        </div>
+    </div>
+
+    <script src="js/product.js"></script>
+</body>
+</html>

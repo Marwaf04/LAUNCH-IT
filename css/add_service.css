@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff4f18;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.service-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff4f18;
+    box-shadow: 0px 0px 4px rgba(255, 79, 24, 0.5);
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #ff4f18;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #e04816;
+}
+
+.submit-button:focus {
+    outline: none;
+    box-shadow: 0px 0px 4px rgba(255, 79, 24, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        font-size: 0.9rem;
+    }
+}

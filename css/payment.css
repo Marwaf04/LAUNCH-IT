@@ -1,0 +1,202 @@
+
+
+
+/* General Styles */
+
+body {
+
+   font-family: "Poppins", sans-serif;
+
+   margin: 0;
+
+   background-color: #f8f8f8;
+
+   color: #333;
+
+}
+
+
+/* Navigation Bar */
+
+.nav {
+
+   display: flex;
+
+   justify-content: space-between;
+
+   align-items: center;
+
+   padding: 20px;
+
+   background-color: #ffffff;
+
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.nav_logo img {
+
+   width: 80px;
+
+}
+
+
+.nav_items {
+
+   list-style: none;
+
+   display: flex;
+
+   gap: 20px;
+
+}
+
+
+.nav_item .nav_link {
+
+   text-decoration: none;
+
+   font-size: 16px;
+
+   font-weight: 600;
+
+   color: #ff4f18;
+
+   transition: color 0.3s ease;
+
+}
+
+
+.nav_item .nav_link:hover {
+
+   color: #161616;
+
+}
+
+
+/* Payment Section */
+
+.payment-container {
+
+   max-width: 800px;
+
+   margin: 40px auto;
+
+   padding: 20px;
+
+   background-color: #ffffff;
+
+   border-radius: 10px;
+
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.payment-container h1,
+
+.payment-container h3 {
+
+   color: #ff4f18;
+
+   margin-bottom: 20px;
+
+   text-align: center;
+
+}
+
+
+.payment-container table {
+
+   width: 100%;
+
+   border-collapse: collapse;
+
+   margin-bottom: 20px;
+
+   font-size: 14px;
+
+}
+
+
+.payment-container table th,
+
+.payment-container table td {
+
+   padding: 10px;
+
+   border: 1px solid #ddd;
+
+   text-align: center;
+
+}
+
+
+.payment-container table th {
+
+   background-color: #f4f4f4;
+
+   font-weight: bold;
+
+}
+
+
+.payment-container form {
+
+   display: flex;
+
+   flex-direction: column;
+
+   gap: 15px;
+
+}
+
+
+.payment-container form label {
+
+   font-weight: bold;
+
+}
+
+
+.payment-container form input {
+
+   padding: 10px;
+
+   border: 1px solid #ddd;
+
+   border-radius: 5px;
+
+   font-size: 14px;
+
+}
+
+
+.payment-container form button {
+
+   background-color: #ff4f18;
+
+   color: white;
+
+   padding: 10px 20px;
+
+   border: none;
+
+   border-radius: 5px;
+
+   font-size: 16px;
+
+   cursor: pointer;
+
+   transition: background-color 0.3s ease;
+
+}
+
+
+.payment-container form button:hover {
+
+   background-color: #e63b0d;
+
+}
+

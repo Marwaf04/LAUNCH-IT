@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Payment Page</title>
+
+   <link rel="stylesheet" href="css/payment.css">
+
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+   <!-- Navigation Bar -->
+
+   <header>
+
+       <nav class="nav">
+
+           <a href="home.html" class="nav_logo"><img src="67.png" alt="Logo" width="100"></a>
+
+           <ul class="nav_items">
+
+               <li class="nav_item"><a href="homePage.html" class="nav_link">Home</a></li>
+
+               <li class="nav_item"><a href="cart.html" class="nav_link">Cart</a></li>
+
+               <li class="nav_item"><a href="payment.html" class="nav_link">Payment</a></li>
+
+               <li class="nav_item"><a href="aboutUs.html" class="nav_link">About Us</a></li>
+
+           </ul>
+
+       </nav>
+
+   </header>
+
+
+   <!-- Payment Section -->
+
+   <main class="payment-container">
+
+       <h1>Billing and Payment</h1>
+
+       <h3>Your Invoice</h3>
+
+       <table id="invoiceTable">
+
+           <thead>
+
+               <tr>
+
+                   <th>Service</th>
+
+                   <th>Price</th>
+
+                   <th>Quantity</th>
+
+                   <th>Total</th>
+
+               </tr>
+
+           </thead>
+
+           <tbody id="invoiceTableBody">
+
+               <!-- Dynamically populated by JavaScript -->
+
+           </tbody>
+
+       </table>
+
+       <h3>Total: $<span id="invoiceTotal">0.00</span></h3>
+
+
+       <!-- Payment Form -->
+
+       <form id="paymentForm">
+
+           <h3>Payment Information</h3>
+
+           <label for="cardName">First Name on Card:</label>
+
+           <input type="text" id="cardName" placeholder="First Name" required>
+
+
+           <label for="cardLastName">Last Name on Card:</label>
+
+           <input type="text" id="cardLastName" placeholder="Last Name" required>
+
+
+           <label for="cardEmail">Email Address:</label>
+
+           <input type="email" id="cardEmail" placeholder="example@domain.com" required>
+
+
+           <label for="cardNumber">Card Number:</label>
+
+           <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+
+           <label for="expirationDate">Expiration Date:</label>
+
+           <input type="text" id="expirationDate" placeholder="MM/YY" required>
+
+
+           <label for="cvv">CVV:</label>
+
+           <input type="text" id="cvv" placeholder="123" required>
+
+
+           <button type="submit" id="payButton">Pay Now</button>
+
+       </form>
+
+   </main>
+
+
+   <script src="js/payment.js"></script>
+
+</body>
+
+
+</html>

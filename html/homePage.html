@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Launch It</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/homePagestyle.css">
+   <link rel="icon" type ="image/png" href="67.png">
+ <!-- Unicons -->
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css"/> <!--Try out he old version-->
+   
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('redirect') === 'login') {
+            const loginForm = document.querySelector('.form.login_form');
+            if (loginForm) {
+                loginForm.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+</script>
+</head>
+
+
+<body>
+<!--Creating Website Navigation Bar in HTML -->
+
+<!--Header-->
+<header class="header">
+    <nav class="nav">
+        <a href="#" class="nav_logo"><img src="67.png" alt="Logo" width="100" height="100"></a>
+
+        <!-- Create a Unordered List Class and Place All The Header's Menu Options -->
+        <ul class="nav_items">
+        <li class = "nav_item">
+                <a href="homePage.html" class="nav_link"><b>Home</b></a>
+                <a href="product.html" class="nav_link"><b>Product</b></a>
+                <a href="cart.html" class="nav_link"><b>Service</b></a>
+                <a href="aboutUs.html" class="nav_link"><b>About Us</b></a>
+
+               
+                
+        </li>
+        </ul>
+
+        <a href=login.php><button class="button" id="form-open">Login</button> </a> <!-- Button for the Login -->
+    </nav>
+</header>
+
+
+<!--Home-->
+   <section class="home">
+
+    <div class="hero_section">
+        <img src="333.jpg" alt="Background Image" class="hero_image">
+    </div>
+
+<script src = "js/home.Pagescript.js"></script>
+<script src="js/adminlogin.js"></script>
+</body>
+</html>

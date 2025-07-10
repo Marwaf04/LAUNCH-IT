@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Order</title>
+    <link rel="stylesheet" href="css/sale_order.css">
+</head>
+<body>
+    <header>
+        Sale Orders
+    </header>
+
+    <div class="order-container">
+        <h2>Sale Order List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Order Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="orderTable">
+             
+            </tbody>
+        </table>
+    </div>
+
+  
+    <script>
+        // Fetch orders from the backend
+        window.addEventListener("load", () => {
+            fetch("get_orders.php")
+                .then(response => response.json())
+                .then(data => {
+                    const orderTable = document.getElementById("orderTable");
+
+                    // Populate table with order data
+                    data.forEach(order => {
+                        const row = document.createElement("tr");
+
+                        row.innerHTML = `
+                            <td>${order.order_id}</td>
+                            <td>${order.customer_name}</td>
+                            <td>${order.order_date}</td>
+                            <td>$${parseFloat(order.amount).toFixed(2)}</td>
+                            <td>${order.status}</td>
+                        `;
+
+                        orderTable.appendChild(row);
+                    });
+                })
+                .catch(error => console.error("Error fetching orders:", error));
+        });
+    </script>
+</body>
+</html>

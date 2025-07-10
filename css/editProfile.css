@@ -1,0 +1,210 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Styles */
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Title */
+.container h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ff4f18;
+    margin-bottom: 1rem;
+}
+
+/* Input Groups */
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: hsla(36, 100%, 90%, 0.5);
+    margin: 1em auto;
+    border-radius: 12px;
+    padding: 0.7em 0.1em;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.input-group i {
+    flex: 1;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group input {
+    flex: 10;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    padding: 0 0.4em;
+    color: #333;
+    border-left: solid 1px hsla(0, 0%, 0%, 0.2);
+}
+
+.input-group:focus-within {
+    border-color: #ff4f18;
+    box-shadow: 0 0 8px rgba(255, 79, 24, 0.5);
+}
+
+.input-group:focus-within i {
+    color: #ff4f18;
+}
+
+/* Input Field Focus */
+input:focus {
+    outline: none;
+    border-left: solid 1px #ff4f18;
+}
+
+/* Buttons */
+.btn {
+    font-size: 1.1rem;
+    padding: 0.6em 0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: #ff4f18;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 0.4em;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #ff9800;
+    transform: scale(1.02);
+}
+
+.btn.edit-btn {
+    background: #ff9800;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5em 1.2em;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1em;
+}
+
+.btn.edit-btn:hover {
+    background: #ff4f18;
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #ff4f18;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff9800;
+}
+
+/* Error and Success Messages */
+.error-main {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #c3e6cb;
+}
+
+/* User Details Section */
+.user-details {
+    margin-top: 3em;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.user-details p {
+    margin-bottom: 0.5em;
+}
+
+.user-details p:first-child {
+    text-decoration: underline;
+    margin-bottom: 1.5em;
+    font-weight: 600;
+}
+
+.user-details a {
+    color: #ff4f18;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.user-details a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+}
+
+/* Password Toggle (Eye Icon) */
+.password {
+    position: relative;
+}
+
+.password i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+}
+
+.password i:hover {
+    color: #ff4f18;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .btn.edit-btn {
+        width: 100%;
+    }
+}

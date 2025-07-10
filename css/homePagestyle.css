@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Onest:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+@import url('https://unicons.iconscout.com/release/v3.0.0/css/line.css');
+
+
+* {
+    margin: 0;
+    padding: 0; /* Added padding reset */
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: #ebeaed;
+ }
+
+/*Creating a Navigation Bar in CSS*/
+
+/*Remove the lines under each items*/
+a{
+    text-decoration:none;
+}
+.header{
+
+        position: fixed;
+        height: 80px;
+        width: 100%;
+        z-index: 100;
+        padding: 0 20px; /* Fixed space from 20 px to 20px */
+     
+}
+
+.hero_section {
+    position: relative;
+    width: 100%; /* Full width of the website */
+    height: 90vh; /* Increased height for better visibility */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: flex-start; /* Aligns items at the top initially */
+}
+
+.hero_image {
+    width: 80%; /* Makes the image take the full width of the website */
+    height: auto; /* Maintains the aspect ratio */
+    margin-top: 80px; /* Lowers the image further */
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
+}
+
+.nav {
+    max-width: 100%;
+    width:100%;
+    margin: 0 auto;
+ }
+ 
+.nav,
+.nav_item{
+   list-style-type: none; /* Remove the bullet points */
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   column-gap: 27px;
+}
+
+.nav_logo {
+    padding-top: 20px; /* Adjust to lower the image */
+}
+.nav_link{
+    color: #ff4f18;
+}
+
+.button{
+    color: #e2d3cf;
+    background:#ff4f18;
+}
+
+/* Select the logo inside the nav */
+.nav_logo img {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.nav_logo img:hover {
+    transform: scale(1.2); /* Scale up the logo to 120% on hover */
+}
+
+.nav_item {
+    column-gap: 25px;
+ }
+ 
+
+.nav_link:hover {
+    color: #161616;
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: scale(1.2); /* Scale up the logo to 120% on hover */
+}
+
+.button {
+padding: 6px 24px;
+border: 1px solid #fff;
+border:none;
+border-radius:6px;
+cursor: pointer;
+
+}
+
+.button:hover{
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: scale(1.2); /* Scale up the logo to 120% on hover */ }
+
+.button:active{
+    transform:scale(0.98);
+}
+/*Create the Home Section*/
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.home::before{
+    content: "";
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color: rgba(0,0,0,0.6) ;
+    z-index:100;
+    opacity:0;
+    pointer-events:none;
+    transition: all 0.5s ease;
+}
+
+.home.show::before{
+    opacity:1;
+    pointer-events:auto;
+}
+
+/*Login Form*/
+.form_container{
+    position:absolute;
+    max-width:320px;
+    width:100%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index:101;
+    padding:25px;
+    border-radius: 12px;
+    box-shadow: rgba(0,0,0,0.1);
+    opacity:0;
+    pointer-events:none;
+    transition:all 0.1s ease-out;
+
+}
+
+.home.show .form_container{
+    opacity:1;
+    pointer-events:auto;
+    transform: translate(-50%, -50%) scale(1.0);} 
+
+.form_close{
+    position: absolute;
+    top:10px;
+    right: 20px; 
+    color: #0b0217;
+    font-size:22px;
+    opacity:0.7;
+    cursor:pointer;
+}
+
+.form_container h2{
+    font-size:22px;
+    color:#0b0217;
+    text-align:center;
+
+}
+
+.input_box{
+    position:relative;
+    margin-top:30px;
+    width: 100%;
+    height: 40px;
+}
+
+.input_box input{
+    height:100%;
+    width:100%;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease;
+    padding: 0 30px;
+    border-bottom: 1.5px solid #aaaaaa;
+
+}
+
+.input_box input:focus{
+    border-color: #ff4f18;
+}
+.input_box i {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size:20px;
+    color: #707070;
+
+}
+
